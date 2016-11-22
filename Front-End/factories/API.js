@@ -20,7 +20,7 @@
       $http({
         method: 'POST',
         data: blogData,
-        url: 'http://localhost:3005/blogs'
+        url: 'http://localhost:3005/blog'
       })
 
       return promise;

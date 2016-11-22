@@ -16,7 +16,7 @@
 
           vm.addPost = function(isValid, postForm)
           {
-            vm.addNewBlog = API.addNewBlog();
+            vm.addNewBlog = API.addNewBlog(vm.postData);
 
             vm.addNewBlog.then(function(response) {
               console.log(response);

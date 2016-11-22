@@ -2,7 +2,7 @@
   <h2>{{ blog.title }}</h2>
   <h3>{{ blog.author }}</h3>
   <p>{{ blog.date }}</p>
-  <article>{{ blog.post }}</article>
+  <article>{{ blog.description }}</article>
   <div ng-repeat="comment in blog.comments">
     <p>{{comment.comment}}</p>
   </div>
@@ -22,10 +22,11 @@
     <textarea 	type="text"
                 class="blog-text"
                 name="blog"
-                ng-model="controller.postData.blog"
+                ng-model="controller.postData.description"
                 placeholder="Enter your blog post..."
                 ng-minlength="10"
                 required>
 		</textarea>
+    <button type="submit">submit</button>
   </form>
 </div>
