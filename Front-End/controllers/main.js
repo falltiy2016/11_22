@@ -2,8 +2,13 @@
 
     angular
     .module('lecture')
-    .controller('mainController', function(API) {
-        let vm = this;
-    })
+    .controller('mainController', [
+      'API',
+      function(API) {
+          const vm = this;
+
+          vm.blogs = API.getAllBlogs();
+      }
+    ]);
 
 })()

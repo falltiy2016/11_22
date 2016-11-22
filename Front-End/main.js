@@ -17,7 +17,7 @@
 	        views: {
 	            'content': {
 	                templateUrl: 'partials/home.html',
-	                controller: 'HeaderController',
+	                controller: 'mainController',
 	                controllerAs: 'controller'
 	            }
 	        }
