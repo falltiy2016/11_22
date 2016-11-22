@@ -8,9 +8,11 @@
           const vm = this;
           let promise = API.getAllBlogs();
           promise.then(function (response, error){
-          	console.log(error);
+          	console.log(response.data);
+            vm.blogs = response.data;
           })
       }
+
     ]);
 
 })()
