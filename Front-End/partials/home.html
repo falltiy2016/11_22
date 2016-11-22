@@ -3,5 +3,29 @@
   <h3>{{ blog.author }}</h3>
   <p>{{ blog.date }}</p>
   <article>{{ blog.post }}</article>
-  <p>{{ blog.comments }}</p>
+  <div ng-repeat="comment in blog.comments">
+    <p>{{comment.comment}}</p>
+  </div>
 </section>
+<div>
+  <form novalidate name="addNewBlog" ng-submit="controller.addPost(addNewBlog.$valid, addNewBlog)">
+    <label>Title:</label>
+    <input 	type="text"
+            class="input-text"
+            name="title"
+            ng-model="controller.postData.title"
+            placeholder="Enter your blog title..."
+            ng-minlength="2"
+            ng-maxlength="60"
+            required>
+    <label>Blog:</label>
+    <textarea 	type="text"
+                class="blog-text"
+                name="blog"
+                ng-model="controller.postData.blog"
+                placeholder="Enter your blog post..."
+                ng-minlength="10"
+                required>
+		</textarea>
+  </form>
+</div>
