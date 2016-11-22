@@ -6,8 +6,10 @@
       'API',
       function(API) {
           const vm = this;
-
-          vm.blogs = API.getAllBlogs();
+          let promise = API.getAllBlogs();
+          promise.then(function (response, error){
+          	console.log(error);
+          })
       }
     ]);
 

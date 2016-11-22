@@ -6,10 +6,13 @@
     const vm = this;
 
     vm.getAllBlogs = function() {
-      $http.get('http://localhost:3009/blogs')
-        .then(results => {
-          return results;
-        });
+      let promise = 
+      $http({
+		 method: 'GET',
+		 url: 'http://localhost:3005/blogs'
+		})
+          return promise;
+        
     }
 
     return {
